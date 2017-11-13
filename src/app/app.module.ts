@@ -9,6 +9,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MapsComponent } from './maps/maps.component';
 import { ChartsComponent } from './charts/charts.component';
 import { ListComponent } from './list/list.component';
+import {AgmCoreModule} from '@agm/core';
 
 
 @NgModule({
@@ -22,7 +23,10 @@ import { ListComponent } from './list/list.component';
   imports: [
     BrowserModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyADOSXXuKP-ZqWtGR3k4wKwdniWEzAlnhM'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
