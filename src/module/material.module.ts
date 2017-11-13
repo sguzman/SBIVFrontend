@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {
-  MatButtonModule, MatCardModule, MatIconModule, MatListModule, MatMenuModule, MatTabsModule,
+  MatButtonModule, MatCardModule, MatCheckboxModule, MatIconModule, MatListModule, MatMenuModule, MatTabsModule,
   MatToolbarModule
 } from '@angular/material';
 
@@ -11,7 +11,8 @@ const ports = [
   MatIconModule,
   MatCardModule,
   MatTabsModule,
-  MatListModule
+  MatListModule,
+  MatCheckboxModule
 ];
 
 @NgModule({
