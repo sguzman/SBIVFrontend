@@ -8,7 +8,7 @@ export class TweetService {
   }
 
   public tweets$() {
-    const url = 'localhost:3000/tweets';
+    const url = 'http://localhost:3000/tweets';
     return this.http.get(url)
       .map(s => s['json']());
   }
