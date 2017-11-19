@@ -1,4 +1,4 @@
-<agm-map [latitude]="34.4145788" [longitude]="-119.8617748" [zoom]="15">
+<agm-map [latitude]="34.4145788" [longitude]="-119.8617748" [zoom]="15" [streetViewControl]="false">
   <template *ngFor="let marker of tweets">
     <agm-marker [latitude]="marker.lat" [longitude]="marker.lng" [draggable]="false"></agm-marker>
   </template>
