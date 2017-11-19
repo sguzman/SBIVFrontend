@@ -10,6 +10,7 @@ import { MapsComponent } from './maps/maps.component';
 import { ChartsComponent } from './charts/charts.component';
 import { ListComponent } from './list/list.component';
 import {AgmCoreModule} from '@agm/core';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import {AgmCoreModule} from '@agm/core';
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyADOSXXuKP-ZqWtGR3k4wKwdniWEzAlnhM'
     })
