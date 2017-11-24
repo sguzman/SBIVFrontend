@@ -6,6 +6,7 @@ import {Subject} from 'rxjs/Subject';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/map';
 import {TweetRaw} from '../interface/tweet-raw.interface';
+import {MatSnackBar} from '@angular/material';
 
 @Component({
   selector: 'app-maps',
@@ -17,7 +18,7 @@ export class MapsComponent implements OnInit {
   tweets: Tweet[] = [];
 
   up$ = new Subject();
-  constructor(public tweet: TweetService) {
+  constructor(public tweet: TweetService, public snack: MatSnackBar) {
     this.up$.flatMap(() => this.tweet.tweets$())
       .map(s => s['tweets'])
       .flatMap(s => s)
@@ -56,6 +57,10 @@ export class MapsComponent implements OnInit {
 
   ngOnInit() {
     this.up$.next();
+  }
+
+  onMarkerClick(marker: Tweet, i: number) {
+    this.snack.open(marker.created_at + ';\n' + marker.text, 'Close');
   }
 
 }
