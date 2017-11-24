@@ -27,7 +27,7 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserAnimationsModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyADOSXXuKP-ZqWtGR3k4wKwdniWEzAlnhM'
+      apiKey: 'AIzaSyDzPyx9BvqM8NYpNv0H-DPGY9OposfOZkg'
     })
   ],
   providers: [],
