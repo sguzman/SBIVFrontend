@@ -5,7 +5,6 @@ import {TweetService} from '../tweet.service';
 import {Subject} from 'rxjs/Subject';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/map';
-import {split} from 'ts-node/dist';
 import {TweetRaw} from '../interface/tweet-raw.interface';
 
 @Component({
@@ -37,7 +36,7 @@ export class MapsComponent implements OnInit {
           const lngNum = parseFloat(lng);
 
           const aTweet: Tweet = {
-            date: s.date,
+            created_at: s.created_at,
             id: s.id,
             text: s.text,
             lat: latNum,
@@ -55,11 +54,8 @@ export class MapsComponent implements OnInit {
     );
   }
 
-  public update() {
-    this.up$.next();
-  }
-
   ngOnInit() {
+    this.up$.next();
   }
 
 }

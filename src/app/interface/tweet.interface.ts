@@ -1,5 +1,5 @@
 export interface Tweet {
-  date: string;
+  created_at: string;
   id: number;
   text: string;
   lat: number;
