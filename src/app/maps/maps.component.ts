@@ -60,7 +60,7 @@ export class MapsComponent implements OnInit {
   }
 
   onMarkerClick(marker: Tweet, i: number) {
-    this.snack.open(marker.created_at + ';\n' + marker.text, 'Close');
+    this.snack.open(marker.created_at + ' **** ' + marker.text, 'Close');
   }
 
 }
