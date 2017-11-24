@@ -8,8 +8,7 @@ export class TweetService {
   }
 
   public tweets$() {
-    const url = 'http://localhost:3000/tweets';
-    return this.http.get(url)
-      .map(s => s['json']());
+    const url = 'https://tranquil-island-19340.herokuapp.com/';
+    return this.http.get(url);
   }
 }
